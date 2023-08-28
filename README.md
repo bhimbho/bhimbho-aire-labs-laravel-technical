@@ -1,19 +1,34 @@
-# Laravel Technical Assessment
+## Setup Instructions
 
-Welcome to the Aire Labs technical interview! We were very impressed by your application, and wanted to invite you to complete a short technical assessment to make sure you would be a good fit for this role.
+1. **Clone Repository:**
+   
+   Clone the repository to your local machine.
 
-## Instructions
+2. **Create .env File:**
+   
+   Create a `.env` file in the root directory of the project.
 
-This repository has boilerplate code for a Laravel project, as well as some graphics assets. 
+3. **Configure Environment:**
+   
+   Open the `.env` file and configure the MySQL database connection and your environment key.
 
-Clone this repository and name it "[your github username]-aire-labs-laravel-technical]". Then, using Livewire, please implement [this design](https://www.figma.com/file/n9fw5W1l4S7FyyV7qadnW2/Technical-Assessment?type=design&node-id=0%3A1&mode=design&t=YjDVnlWZmevfQ8JU-1).
+4. **Migrate Database:**
+   
+   Run the following command to migrate the database tables:
 
-When you are finished, email us the link to your repo with the subject "[Your Name] Aire Labs React Technical Assessment Completed".
+   ```sh
+   ./vendor/bin/sail migrate
 
-## Grading
+5. **Seed to Database:**
+   
+   Run the following command to seed to database tables:
 
-We are grading based on:
+   ```sh
+   ./vendor/bin/sail db:seed
 
-* [ ] Code structure
-* [ ] Accuracy to the Figma
-* [ ] Responsiveness
+Launch app and enjoy
+
+**Note:** if you run into run time error running sail run 
+
+    ```sh
+    docker run --rm -v $(pwd):/opt -w /opt laravelsail/php80-composer:latest composer install
