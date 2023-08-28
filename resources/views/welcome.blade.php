@@ -14,7 +14,7 @@
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Inter&family=Space+Grotesk&display=swap" rel="stylesheet">
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body class="antialiased">
+    <body class="antialiased bg-[#FFF1E8] overflow-x-hidden">
        @livewire('CustomerReviews')
     <body>
 </html>

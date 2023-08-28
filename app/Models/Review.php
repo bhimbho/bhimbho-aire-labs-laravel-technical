@@ -20,7 +20,7 @@ class Review extends Model
     protected function rating() : Attribute 
     {
         return Attribute::make(
-            get: fn (string $value) => Star::make($value),
+            get: fn (string $value) => Star::useSvg($value),
         );
     }
 }
